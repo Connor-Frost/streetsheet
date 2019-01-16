@@ -20,10 +20,42 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
+  <link rel="stylesheet" href="assets/leaflet.css">
+  <link rel="stylesheet" href="assets/L.Icon.FontAwesome.css" />
   
+    <style>
+    #map {
+    height: 500px;
+    width: 68%;
+    float:left;
+    }
+
+    .map_holder{
+    position: relative;
+    width: 700px;
+    height: 600px;
+    }
+
+    .box{
+    position:absolute;
+    width:30%;
+    height:500px;
+    background-color:rgba(255,250,245,0.5);
+    right:0;
+    z-index: 1000;
+    float:left;
+    }
+      /* css to customize Leaflet default styles */
+      .custom .leaflet-popup-tip,
+      .custom .leaflet-popup-content-wrapper {
+      background: #666;
+      color: #ffffff;
+      }
+
+    </style>
   
 </head>
-<body>
+<body onload="myFunction()" id="page-top">
   <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-7">
 
     
@@ -92,10 +124,27 @@
 </section>
 
 <section class="map1 cid-rfdWZ19jlh" id="map1-m">
-
-     
-
-    <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJVWIVqU2FdUgRMm-nCMgHQYA" allowfullscreen=""></iframe></div>
+   <div class="google-map">
+      
+            <div class="map_holder">
+              <div class="row-fluid" id="map">
+               
+              </div>
+              <div class="row-fluid box">
+                <dl>
+                  <dt>Name</dt>
+                  <dd id='description'>&nbsp;</dd>
+                  <dt>Artist</dt>
+                  <dd id='category'>&nbsp;</dd>
+                  <dt>Sponsor</dt>
+                  <dd id='city'>&nbsp;</dd>
+                  <dt>Designer</dt>
+                  <dd id='head'>&nbsp;</dd>
+                 
+                </dl>
+              </div>
+            </div> 
+</div>
 </section>
 
 <section class="cid-rfj5ZIl81F" id="footer1-r">
@@ -178,6 +227,11 @@
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
   
+  
+    <script src="assets/leaflet.js"></script>
+    <script src="assets/tabletop.min.js"></script>
+    <script src="app.js"></script>
+    <script src="assets/L.Icon.FontAwesome.js"></script>
   
 </body>
 </html>
