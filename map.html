@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="assets/images/off-the-fence-logo-1-214x213.png" type="image/x-icon">
   <meta name="description" content="Web Page Maker Description">
   <title>Map</title>
+  <!--Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -24,38 +26,34 @@
   <link rel="stylesheet" href="assets/L.Icon.FontAwesome.css" />
   
     <style>
-  .cid-rfdWZ19jlh .google-map {
-      height: 50rem;
-      position: relative;
-  }
-      
-    #map {
-    height: 50rem;
-    width: 68%;
-    float:left;
-    }
-
-    .map_holder{
+  	.cid-rfdWZ19jlh .google-map {
+    height: 30rem;
     position: relative;
-    width: 100%;
-    height: 50rem;
+  	}
+     
+    .google-map {
+    position: relative;
+
+	}
+
+    .map {
+    height: 30rem;
+
     }
 
     .box{
-    position:absolute;
-    width:22%;
-    height:50rem;
-    background-color:rgba(255,250,245,0.5);
-    right:0;
-    z-index: 1000;
-    float:left;
+    height:30rem;
+    background-color:rgba(255,250,245,0.3);
+	padding: 10px;
+	}
+
+
+    /* css to customize Leaflet default styles */
+    .custom .leaflet-popup-tip,
+    .custom .leaflet-popup-content-wrapper {
+    background: #666;
+    color: #ffffff;
     }
-      /* css to customize Leaflet default styles */
-      .custom .leaflet-popup-tip,
-      .custom .leaflet-popup-content-wrapper {
-      background: #666;
-      color: #ffffff;
-      }
 
     </style>
   
@@ -129,27 +127,24 @@
 </section>
 
 <section class="map1 cid-rfdWZ19jlh" id="map1-m">
-   <div class="google-map">
-      
-            <div class="map_holder">
-              <div class="row-fluid" id="map">
+   <div class="container">
+            <div class="media-container-row">
+              <div class="card col-12 col-md-7 col-lg-8 map" id="map">
                
               </div>
-              <div class="row-fluid box">
+              <div class="card col-12 col-md-5 col-lg-4 box card-box">
+              	<h2 id='category'>&nbsp;</h2>
                 <dl>
-                  <dt>Name</dt>
                   <dd id='description'>&nbsp;</dd>
-                  <dt>Artist</dt>
-                  <dd id='category'>&nbsp;</dd>
-                  <dt>Sponsor</dt>
-                  <dd id='city'>&nbsp;</dd>
-                  <dt>Designer</dt>
-                  <dd id='head'>&nbsp;</dd>
                  
+                  <dt>Opening Times</dt>
+                  <dd id='city'>&nbsp;</dd>
+                  <dt>Tel</dt>
+                  <dd id='head'>&nbsp;</dd>
                 </dl>
               </div>
             </div> 
-</div>
+		</div>
 </section>
 
 <section class="cid-rfj5ZIl81F" id="footer1-r">
