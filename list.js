@@ -25,7 +25,7 @@
         var list_li = '';
         var content_li = '';
 
-        $("#table_info").text("We found the tables " + tabletop.model_names.join(", "));
+       /* $("#table_info").text("We found the tables " + tabletop.model_names.join(", "));*/
 
         $.each( tabletop.sheets(), function(i, sheet) {
           $("#table_info").append("<p>" + sheet.name + " has " + sheet.column_names.join(", ") + "</p>");
